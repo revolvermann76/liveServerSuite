@@ -1,87 +1,41 @@
-require(["hux/ui/buttons/IconButton"], function (IconButton) {
+require(["hux/ui/IconStack", "hux/ui/Icon"], function(IconStack, Icon) {
 
-  var cnt = $('<div>')
-    .css({
-      'padding': '25px'
-    })
-    .appendTo('body');
+    var tl = new IconStack({
+        stack: [
+        
+            { //Objekt mit Kontextinformationen und fertigem Icon-Widget
+                color: "orange",
+                icon: new Icon({
+                  icon: "vi-meldewesen",
+                  width: "300px",
+                  height: "300px",
+                  color: "green"
+                })
+            },
+            
+            "vi-missing", //Einfach nur der Name des VI-Icons
+            
+            { //Skaliert, gefärbt und in eine Ecke geschubst
+                icon: "vi-success",
+                color: "white",
+                stretch: 0.25,
+                position: "bottom-left"
+            },
+            { //SVG-Beispiel 
+                icon: "/trunk/spielwiese/fuehrerscheinwesen.svg",
+                color: "yellow"
+            },
+            
+            { //PNG-Beispiel (Färben geht nicht)
+                icon: "/trunk/spielwiese/icon.png",
+                stretch: 0.25,
+                position: "center",
+                color: "#f00" //nutzlos
+            }
+        ],
+        width: 300, //Dimensionen des IconStacks
+        height: 300,
+        renderTo: "body"
+    });
 
-
-  // NORMAL
-
-  cnt
-    .append("Normal<br/>");
-
-  new IconButton({
-    icon: "vi-meldewesen",
-    renderTo: cnt
-  });
-  cnt
-    .append("<br/>Normal disabled<br/>");
-
-  new IconButton({
-    icon: "vi-meldewesen",
-    renderTo: cnt,
-    disabled: true
-  });
-
-
-  // FLAT
-  cnt
-    .append("<br/><br/><br/>Flat<br/>");
-  new IconButton({
-    icon: "vi-meldewesen",
-    renderTo: cnt,
-    flat: true
-  });
-  cnt
-    .append("<br/>Flat disabled<br/>");
-
-  new IconButton({
-    icon: "vi-meldewesen",
-    renderTo: cnt,
-    disabled: true,
-    flat: true
-  });
-
-
-  // LARGE
-  cnt
-    .append("<br/><br/><br/>Large<br/>");
-  new IconButton({
-    icon: "vi-meldewesen",
-    scale : "large",
-    renderTo: cnt,
-  });
-  
-  
-
-  // INVERSE
-
-  var blueCnt = $('<div>')
-    .css({
-      'background-color': '#004987',
-      'padding': '25px'
-    })
-    .appendTo('body');
-
-  blueCnt
-    .append("<span style='color:white;'>Inverse</span><br/>");
-    
-  new IconButton({
-    icon: "vi-meldewesen",
-    renderTo: blueCnt,
-    inverse: true
-  });
-  
-  blueCnt
-    .append("<br/><span style='color:white;'>Inverse disabled<span><br/>");
-
-  new IconButton({
-    icon: "vi-meldewesen",
-    renderTo: blueCnt,
-    disabled: true,
-    inverse: true,
-  });
 });
-  
