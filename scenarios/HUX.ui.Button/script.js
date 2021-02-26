@@ -1,6 +1,6 @@
 require(["hux/ui/basic/Button"], function (Button) {
   new Button({
-    text: "{{var 'pi'}}",
+    text: "Have fun",
     renderTo: "body",
     //disabled: true,
     scale: "large",

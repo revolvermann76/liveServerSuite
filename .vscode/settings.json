@@ -1,10 +1,10 @@
 {
-  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.CustomBrowser": "firefox",
   "liveServer.settings.fullReload": true,
-  "liveServer.settings.useWebExt": true,
   "liveServer.settings.mount": [
     ["/dejavu", "d:/Working/Repos/org.vois.base.fonts/org.vois.base.fonts.dejavu/src/main/resources"],
     ["/less","./lib/less"],
+    ["/hux-loader", "./lib/hux-loader"],
     ["/hux4","d:/Working/Repos/org.vois.base.ui.huxjs/org.vois.base.ui.huxjs.v4"],
     ["/hux5","d:/Working/Repos/org.vois.base.ui.huxjs/org.vois.base.ui.huxjs.v5"],
     ["/hux6","d:/Working/Repos/org.vois.base.ui.huxjs/org.vois.base.ui.huxjs.v6"],
