@@ -1,5 +1,5 @@
 {
-  "liveServer.settings.CustomBrowser": "firefox",
+  "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.fullReload": true,
   "liveServer.settings.mount": [
     ["/dejavu", "d:/Working/Repos/org.vois.base.fonts/org.vois.base.fonts.dejavu/src/main/resources"],
